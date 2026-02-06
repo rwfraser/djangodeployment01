@@ -4,7 +4,7 @@ services:
     runtime: python
     rootDir: ./myearringadvisor
     buildCommand: chmod +x build.sh && ./build.sh
-    startCommand: gunicorn myearringadvisor.wsgi:application
+    startCommand: gunicorn myearringadvisor.wsgi:application --bind 0.0.0.0:$PORT
     plan: free
     autoDeploy: true
     envVars:
