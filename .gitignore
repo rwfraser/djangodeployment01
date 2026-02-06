@@ -12,6 +12,14 @@ venv/
 env/
 ENV/
 
+# Environment variables
+.env
+
+# Django
+staticfiles/
+db.sqlite3
+db.sqlite3-journal
+
 # IDEs
 .vscode/
 .idea/
