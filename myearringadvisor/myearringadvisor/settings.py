@@ -14,9 +14,24 @@ from pathlib import Path
 import os
 import dj_database_url
 from dotenv import load_dotenv
+import environ
+
+# settings.py
+import environ
+
+env = environ.Env(
+    # set casting, default value
+    DEBUG=(bool, False) 
+)
+
+# Read the .env file
+environ.Env.read_env()
+
+# ✅ CORRECT: Automatically converts "True"/"False" strings to Python booleans
+DEBUG = env('DEBUG')
 
 # Load environment variables from .env file
-load_dotenv()
+load_dotenv(override=True)
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -29,7 +44,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = os.environ.get('SECRET_KEY', 'django-insecure-6=d#_8!&g3^3b!2qee3*741%tae*=vbwmj+h9kjgoe=)em7%7y')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = os.environ.get('DEBUG', 'False') == 'True'
+# DEBUG = os.environ.get('DEBUG', 'False') == 'True'
 
 ALLOWED_HOSTS = os.environ.get('ALLOWED_HOSTS', 'localhost,127.0.0.1').split(',')
 
