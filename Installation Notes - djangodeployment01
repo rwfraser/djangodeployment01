@@ -1,0 +1,12 @@
+Installation Notes - djangodeployment01
+
+1) Use the venv installed at c:\users\rogeridaho\awstest => this will proivde python v3.11
+2) install django 5.2.10:  'python.exe -m pip install "Django==5.2.10"'   => NOTE: already installed in venv 
+3) check for installed libraries with 'pip freeze'.  
+4) Create requirements.txt or requirements folder with base.txt and dev.txt 
+5) Create Django project, apps, superuser, migrate database, and run server for testing
+6) Create git repositories for code version control
+6) Implement required code
+7) Test code, update git repositories 
+8) implement postgresql database 
+9) Create .env file as necessary and edit settings.py for cloud deployment   
