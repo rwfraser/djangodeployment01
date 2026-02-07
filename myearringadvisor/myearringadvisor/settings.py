@@ -13,11 +13,11 @@ https://docs.djangoproject.com/en/5.2/ref/settings/
 from pathlib import Path
 import os
 import dj_database_url
-from dotenv import load_dotenv
 import environ
+# from dotenv import load_dotenv
 
 # settings.py
-import environ
+
 
 env = environ.Env(
     # set casting, default value
@@ -31,7 +31,7 @@ environ.Env.read_env()
 DEBUG = env('DEBUG')
 
 # Load environment variables from .env file
-load_dotenv(override=True)
+# load_dotenv(override=True)
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
